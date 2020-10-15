@@ -68,27 +68,27 @@ function Form() {
       <form onSubmit={submit}>
         <div>
           <label>Name
-            <input onChange={handleChange} value={form.name} name="name" type="text"/>
+            <input onChange={handleChange} value={form.name} id="name" name="name" type="text"/>
           </label>
         </div>
         <div>
           <label>Email
-            <input onChange={handleChange} value={form.email} name="email" type="email"/>
+            <input onChange={handleChange} value={form.email} id="email" name="email" type="email"/>
           </label>
         </div>
 
         <div>
           <label>Password
-            <input onChange={handleChange} value={form.password} name="password" type="password"/>
+            <input onChange={handleChange} value={form.password} id="password" name="password" type="password"/>
           </label>
         </div>
 
         <div>
           <label>Terms Of Service
-            <input onChange={handleChange} checked={form.agree} name="agree" type="checkbox"/>
+            <input onChange={handleChange} checked={form.agree} id="agree" name="agree" type="checkbox"/>
           </label>
         </div>
-        <button disabled={disabled}>Submit</button>
+        <button id="submit" disabled={disabled}>Submit</button>
       </form>
       <div>
         {users.length > 0 ? <pre>{JSON.stringify(users)}</pre> : null}
